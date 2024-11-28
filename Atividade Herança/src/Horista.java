@@ -1,8 +1,7 @@
 public class Horista extends Empregado {
-    
     private double horas;
 
-    public Horista(String n, String e, double h){
+    public Horista(String n, String e, double h) {
         super(n, e);
         horas = h;
     }
@@ -15,8 +14,13 @@ public class Horista extends Empregado {
         this.horas = horas;
     }
 
-    public void calcularSalario(){
-        salario = horas * 50;
+    public void calcularSalario() {
+        salario = horas * 50;  
     }
-    
+
+    @Override
+    public void imprimir() {
+        super.imprimir();
+        System.out.println("Horas Trabalhadas: " + horas);
+    }
 }
